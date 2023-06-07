@@ -1,10 +1,10 @@
 function sendMessage(){
     var message =document.getElementById("message").value;
     document.getElementById("message").value="";
-    var usermessage="<div class='user-message' style=' padding: 5px 20px;; background:darkslategrey;box-shadow:0px 0px 10px rgba(224,225,16,0.3); border-radius:20px;font-weight:bolder; margin-top:1em; float: right;width:80%;font-size: 20px;color:#fff; '><br><span style='color:yellow'>You:</span> <br>"+ message +"</div>";
+    var usermessage="<div class='user-message' style=' padding: 5px 20px;; background:darkslategrey;box-shadow:0px 0px 10px rgba(224,225,16,0.3); border-radius:20px; margin-top:1em; float: right;width:80%;font-size: 20px;color:#fff; '><br><span style='color:yellow'>You:</span> <br>"+ message +"</div>";
     document.getElementById("chatting").innerHTML += usermessage;
 
-    var chatbotmessage ="<div class='bot-message' style=' padding: 5px 20px;border:0px;box-shadow:0px 0px 10px rgba(224,225,16,0.3);border-radius:20px;font-weight:bolder; margin-top:6em; width:80%;font-size: 20px;background:#2a2a2a; color:#fff;'><br><span style='color:yellow'>MS Chatbot AI:</span><br>"+ motivaionalResponse(usermessage)+"</div>";
+    var chatbotmessage ="<div class='bot-message' style=' padding: 5px 20px;border:0px;box-shadow:0px 0px 10px rgba(224,225,16,0.3);border-radius:20px; margin-top:6.8em; width:80%;font-size: 20px;background:#2a2a2a; color:#fff;'><br><span style='color:yellow'>MS Chatbot AI:</span><br>"+ motivaionalResponse(usermessage)+"</div>";
     document.getElementById("chatting").innerHTML += chatbotmessage;
 }
 // function to get the motivational message
@@ -53,6 +53,9 @@ function motivaionalResponse(text){
     }
     else if(containkeyword(text, ["you are crazy,","you are crazy","you are mad,", "you are mad", "mad","crazy", "idiot", "bitch", "are you mad","are you crazy","bastard"])){
         return "I am deeply sorry if I made you angry &#128116; kindly let understand the way you really feel and let me motivate you!";
+    }
+    else if(containkeyword(text, ["who made you","developed you","created you"])){
+        return "More Success, was the one who developed me.";
     }
     else{
         return "Sorry  I don't really understand the way you feel or what you are trying to say, kindly let me know the way you actually feel!";
