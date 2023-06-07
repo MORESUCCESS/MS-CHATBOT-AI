@@ -54,7 +54,7 @@ function motivaionalResponse(text){
     else if(containkeyword(text, ["you are crazy,","you are crazy","you are mad,", "you are mad", "mad","crazy", "idiot", "bitch", "are you mad","are you crazy","bastard"])){
         return "I am deeply sorry if I made you angry &#128116; kindly let understand the way you really feel and let me motivate you!";
     }
-    else if(containkeyword(text, ["who made you","developed you","created you","made you","developed you"])){
+    else if(containkeyword(text, ["who made you","developed you","created you","made you","developed you","created you"])){
         return "More Success &#128119;, was the one who developed me.";
     }
     else if(containkeyword(text, ["I am good","I'm good","fine","I am okay","Alright"])){
