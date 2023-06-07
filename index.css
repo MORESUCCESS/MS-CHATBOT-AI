@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    /* overflow: hidden; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2a2a2a;
+}
+.container{
+    background-color: #2a2a2a;
+    width: 75%;
+    height: 100%;
+    margin-top: 8em;
+    box-shadow: 0px 0px 30px rgba(255, 224, 116, 0.3);
+    display: block;
+    justify-content: center;
+    align-items: center;
+    border: 0px;
+    border-radius: 40px;
+    overflow: hidden;
+    padding: 3rem 5rem;
+}
+#emoji{
+    font-size: 10em;
+}
+.container h1{
+    color: #fff;
+    font-size: 35px;
+    font-weight: bolder;
+    font-family: 'Roboto' sans-serif;
+}
+.darken{
+    animation-name: anime;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
+@keyframes anime{
+    0%{
+        color: darkorange;
+    }
+    100%{
+        color: #fff;
+    }
+}
+.lighten{
+    animation-name: ame;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
+@keyframes ame{
+    0%{
+        color: #fff;
+    }
+    100%{
+        color: darkorange;
+    }
+}
+.name-emoji{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.cta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cta button{
+    padding: 10px 25px;
+    background-color: orangered;
+    border: 0px;
+    border-radius: 20px;
+}
+.cta button a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bolder;
+    text-decoration: none;
+    font-family: 'Roboto' sans-serif;
+}
+/*Styling the chatting page */
+.header{
+    width: 100%;
+    background-color: whitesmoke;
+    height: 60%;
+    padding: 5px 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    font-weight: bolder;
+    border-radius: 20px;
+    border: 0px;
+}
+.chatting{
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    display: block;
+    margin-top: 1em;
+    border: 0px;
+    border-radius: 20px;
+    padding: 0.1rem 0.2rem;
+    padding-bottom: 2em;
+    overflow: hidden;
+}
+.text-container{
+    background-color:#2a2a2a;
+    color: #fff;
+    width: 80%;
+    height: 30%;
+    margin-top: 2rem;
+    border: 0px;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-weight: bolder;
+    font-size: 20px;
+    display: flex;
+   flex-direction: column;
+   line-height: 27px;
+   overflow: hidden;
+}
+.reply{
+    background-color:#fff;
+    color: #000;
+    width: 80%;
+    height: 30%;
+    margin-top: 2rem;
+    border: 0px;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-weight: bolder;
+    font-size: 20px;
+   flex-direction: column;
+   line-height: 27px;
+   overflow: hidden;
+   float: right;
+   display: flex;
+}
+.input{
+    width: 100%;
+    background-color: lawngreen;
+    display: flex;
+    border-radius: 20px;
+    border: 0px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2em;
+}
+input[type=text]{
+    padding: 10px 20px;
+    font-size: 20px;
+    width: 100%;
+    background-color: lawngreen;
+    border: 0px;
+    border-radius: 20px;
+    color: #000;
+}
+.fa-send{
+    color: #000;
+    font-size: 20px;
+    margin-top: 0.6em;
+    margin-right: 1em;
+    cursor: pointer;
+}
+.AI-name{
+    color: yellow;
+}
+.chatb{
+    color:#fff;
+}
+/* making it responsive */
+@media only screen and (max-width: 600px){
+    .container,#container{
+        width:98%;
+        height: 100%;
+        padding: 1rem 2rem
+    }
+    .name-emoji{
+        font-size: 6em;
+        height: 40vh;
+        display: flex;
+        text-align: center;
+        width: 80%;
+    }
+    #emoji, h1{
+        font-size: 12px;
+    }
+    #emoji{
+        font-size: 1em;
+    }
+}
