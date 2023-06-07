@@ -51,7 +51,7 @@ function motivaionalResponse(text){
     else if(containkeyword(text, ["get hurt", "feel disappointed", "disappointed","hurt"])){
         return "As long as the world still exist people will always remain unbelievable, unpredictable, and always full of weird doings!. If you always get worried about what people will say, you will remain unhappy, just stay positive and be your real self";
     }
-    else if(containkeyword(text, ["you are crazy,","you are crazy","you are mad,", "you are mad", "mad","crazy", "idiot", "bitch", "are you mad","are you crazy","bastard"])){
+    else if(containkeyword(text, ["you are crazy,","you are crazy", "you are mad", "mad","crazy", "idiot", "bitch", "are you mad","are you crazy","bastard"])){
         return "I am deeply sorry if I made you angry &#128116; kindly let understand the way you really feel and let me motivate you!";
     }
     else if(containkeyword(text, ["who made you","developed you","created you","made you","developed you","created you"])){
