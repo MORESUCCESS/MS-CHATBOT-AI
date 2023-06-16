@@ -4,10 +4,10 @@ function sendMessage(){
     }else{
     var message =document.getElementById("message").value;
     document.getElementById("message").value="";
-    var usermessage="<div class='user-message' style=' padding: 5px 20px;font-weight:bolder; background:darkslategrey;box-shadow:0px 0px 10px rgba(224,225,16,0.3); border-radius:20px; margin-top:1em; float: right;width:80%;font-size: 20px;color:#fff; '><br><span style='color:yellow'>You:</span> <br>"+ message +"</div>";
+    var usermessage="<div class='user-message' style=' padding: 5px 20px;font-weight:bolder; background:darkslategrey;box-shadow:0px 0px 10px rgba(224,225,16,0.3); border-radius:32px 0px 32px 32px; margin-top:1em; float: right;width:80%;font-size: 20px;color:#fff; '><br><span style='color:yellow'>You:</span> <br>"+ message +"</div>";
     document.getElementById("chatting").innerHTML += usermessage;
 
-    var chatbotmessage ="<div class='bot-message' style=' padding: 5px 20px;font-weight:bolder;border:0px;box-shadow:0px 0px 10px rgba(224,225,16,0.3);border-radius:20px; margin-top:6.8em; width:80%;font-size: 20px;background:#2a2a2a; color:#fff;'><br><span style='color:yellow'>MS Chatbot AI:</span><br>"+ motivaionalResponse(usermessage)+"</div>";
+    var chatbotmessage ="<div class='bot-message' style=' padding: 5px 20px;font-weight:bolder;border:0px;box-shadow:0px 0px 10px rgba(224,225,16,0.3);border-radius:0px 32px 32px 32px; margin-top:6.8em; width:80%;font-size: 20px;background:#2a2a2a; color:#fff;'><br><span style='color:yellow'>MS Chatbot AI:</span><br>"+ motivaionalResponse(usermessage)+"</div>";
     document.getElementById("chatting").innerHTML += chatbotmessage;
 }}
 // function to get the motivational message
