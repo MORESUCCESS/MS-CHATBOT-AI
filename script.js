@@ -1,12 +1,15 @@
 function sendMessage(){
+    if(document.getElementById("message").value==""){
+        alert("A message is required! inorder to communicate with MS CHATBOT");
+    }else{
     var message =document.getElementById("message").value;
     document.getElementById("message").value="";
-    var usermessage="<div class='user-message' style=' padding: 5px 20px;font-weght:bolder; background:darkslategrey;box-shadow:0px 0px 10px rgba(224,225,16,0.3); border-radius:20px; margin-top:1em; float: right;width:80%;font-size: 20px;color:#fff; '><br><span style='color:yellow'>You:</span> <br>"+ message +"</div>";
+    var usermessage="<div class='user-message' style=' padding: 5px 20px;font-weight:bolder; background:darkslategrey;box-shadow:0px 0px 10px rgba(224,225,16,0.3); border-radius:20px; margin-top:1em; float: right;width:80%;font-size: 20px;color:#fff; '><br><span style='color:yellow'>You:</span> <br>"+ message +"</div>";
     document.getElementById("chatting").innerHTML += usermessage;
 
-    var chatbotmessage ="<div class='bot-message' style=' padding: 5px 20px;font-weght:bolder;border:0px;box-shadow:0px 0px 10px rgba(224,225,16,0.3);border-radius:20px; margin-top:8em; width:80%;font-size: 20px;background:#2a2a2a; color:#fff;'><br><span style='color:yellow'>MS Chatbot AI:</span><br>"+ motivaionalResponse(usermessage)+"</div>";
+    var chatbotmessage ="<div class='bot-message' style=' padding: 5px 20px;font-weight:bolder;border:0px;box-shadow:0px 0px 10px rgba(224,225,16,0.3);border-radius:20px; margin-top:6.8em; width:80%;font-size: 20px;background:#2a2a2a; color:#fff;'><br><span style='color:yellow'>MS Chatbot AI:</span><br>"+ motivaionalResponse(usermessage)+"</div>";
     document.getElementById("chatting").innerHTML += chatbotmessage;
-}
+}}
 // function to get the motivational message
 function motivaionalResponse(text){
     if(containkeyword(text, ["sad", "down", "broken", "depressed", "unhappy", "heartbroken", "not happy"])){
@@ -51,14 +54,11 @@ function motivaionalResponse(text){
     else if(containkeyword(text, ["get hurt", "feel disappointed", "disappointed","hurt"])){
         return "As long as the world still exist people will always remain unbelievable, unpredictable, and always full of weird doings!. If you always get worried about what people will say, you will remain unhappy, just stay positive and be your real self";
     }
-    else if(containkeyword(text, ["you are crazy,","you are crazy", "you are mad", "mad","crazy", "idiot", "bitch", "are you mad","are you crazy","bastard"])){
+    else if(containkeyword(text, ["you are crazy,","you are crazy","you are mad,", "you are mad", "mad","crazy", "idiot", "bitch", "are you mad","are you crazy","bastard"])){
         return "I am deeply sorry if I made you angry &#128116; kindly let understand the way you really feel and let me motivate you!";
     }
-    else if(containkeyword(text, ["who made you","developed you","created you","made you","developed you","created you"])){
-        return "More Success &#128119;, was the one who developed me.";
-    }
-    else if(containkeyword(text, ["I am good","I'm good","fine","I am okay","Alright"])){
-        return "Ohk";
+    else if(containkeyword(text, ["who made you","developed you","created you"])){
+        return "More Success, was the one who developed me.";
     }
     else{
         return "Sorry  I don't really understand the way you feel or what you are trying to say, kindly let me know the way you actually feel!";
